@@ -15,7 +15,7 @@
 
   $.fn.xallarap = function(options) {
     var options = options || {};
-    console.log(this);
+
     return this.each(function() {
       var $this = $(this);
 
@@ -40,7 +40,6 @@
           , value = $this.data('xap-value')
           , percent = (scrollTop - offset.top + windowHeight / 2) / offset.top;
 
-        console.log(percent);
         $this
           .stop()
           .animate({ top: position.top - (value * percent) }, $this.data('duration'), $this.data('easing'));
