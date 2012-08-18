@@ -5,11 +5,15 @@
     <script src="../jquery-xallarap.js"></script>
   </head>
   <style>
-    body { height: 3000px; }
-    .boxes { position: absolute; width: 100px; height: 100px; }
+    body { height: 2000px; }
+    .boxes { position: absolute; width: 100px; height: 100px; z-index: 1; opacity: .6 }
+    .boxes-shadow { position: absolute; width: 100px; height: 100px; z-inedx: 0; border: 1px dotted gray; }
     .box-01 { top: 1100px; left: 100px; background-color: red; }
     .box-02 { top: 1200px; left: 300px; background-color: green; }
     .box-03 { top: 1300px; left: 500px; background-color: blue; }
+    .box-01-shadow { top: 1100px; left: 100px; }
+    .box-02-shadow { top: 1200px; left: 300px; }
+    .box-03-shadow { top: 1300px; left: 500px; }
   </style>
   <script>
     $(function() {
@@ -17,10 +21,12 @@
     });
   </script>
   <body>
-
     <div class="boxes box-01" data-xap-value="200"></div>
     <div class="boxes box-02" data-xap-value="400"></div>
     <div class="boxes box-03" data-xap-value="600"></div>
 
+    <div class="boxes-shadow box-01-shadow data-xap-value="0"></div>
+    <div class="boxes-shadow box-02-shadow data-xap-value="0"></div>
+    <div class="boxes-shadow box-03-shadow data-xap-value="0"></div>
   </body>
 </html>
