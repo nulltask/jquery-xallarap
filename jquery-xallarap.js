@@ -13,8 +13,9 @@
     , scrollTop = 0
     , windowHeight = 0;
 
-  $.fn.xallarap = function(options) {
-    var options = options || {};
+  $.fn.xallarap = function(options, callback) {
+    var options = options || {}
+      , callback = options.callback || callback || defaultCallback;
 
     return this.each(function() {
       var $this = $(this);
@@ -40,9 +41,7 @@
           , value = $this.data('xap-value')
           , percent = (scrollTop - offset.top - $this.height() / 2 + windowHeight / 2) / offset.top;
 
-        $this
-          .stop()
-          .animate({ top: position.top - (value * percent) }, $this.data('duration'), $this.data('easing'));
+        callback.call($this, position, offset, value, percent);
       });
     });
   };
@@ -57,5 +56,17 @@
       windowHeight = $window.height();
     }).trigger('resize');
   });
+
+  /**
+   * Default callback function.
+   */
+
+  function defaultCallback(position, offset, value, percent) {
+    var $this = $(this);
+
+    $this
+      .stop()
+      .animate({ top: position.top - (value * percent) }, $this.data('duration'), $this.data('easing'));
+  }
 
 }).call(this, window, document, jQuery);
