@@ -1,4 +1,3 @@
-
 # jquery-xallarap
 
   Pseudo vertical parallax-ish jQuery plugin.
@@ -15,7 +14,7 @@
 HTML:
 
 ```html
-<div class="box" style="position: absolute;" data-xap-value="1000"></div>
+<div class="box" style="position: absolute; top: 10px; left: 10px;" data-xap-value="1000"></div>
 ```
 
 JavaScript:
