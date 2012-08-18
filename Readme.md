@@ -25,6 +25,8 @@ jQuery(function($) {
 });
 ```
 
+See [example](http://uniba.jp/jquery-xallarap/examples/).
+
 ## Authors
 
   - Seiya Konno &lt;seiya@uniba.jp&gt; ([nulltask](https://github.com/nulltask))
