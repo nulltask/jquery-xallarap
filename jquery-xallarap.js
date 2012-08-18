@@ -38,7 +38,7 @@
         var position = $this.data('xap-position')
           , offset = $this.data('xap-offset')
           , value = $this.data('xap-value')
-          , percent = (scrollTop - offset.top + windowHeight / 2) / offset.top;
+          , percent = (scrollTop - offset.top - $this.height() / 2 + windowHeight / 2) / offset.top;
 
         $this
           .stop()
