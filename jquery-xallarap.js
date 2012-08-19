@@ -66,7 +66,7 @@
 
     $this
       .stop()
-      .animate({ top: position.top - (value * percent) }, $this.data('duration'), $this.data('easing'));
+      .animate({ top: position.top - (value * percent) }, $this.data('xap-duration'), $this.data('xap-easing'));
   }
 
 }).call(this, window, document, jQuery);
