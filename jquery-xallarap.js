@@ -1,6 +1,6 @@
 
 /*!
- * jQuery Xallarap 0.0.1
+ * jQuery Xallarap 0.1.1
  *
  * @dependency jQuery 1.7+
  * @author Uniba Inc.
